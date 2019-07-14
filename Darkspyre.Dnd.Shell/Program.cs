@@ -69,7 +69,7 @@ namespace Darkspyre.Dnd.Shell
             if (bDoImport)
             {
                 var importer = new Import();
-                DataLibrary library = importer.ImportFile(path, "", FGSourceType.Campaign).Result;
+                DataLibrary library = importer.ImportFile(path, "", (int)FGSourceType.Campaign).Result;
 
                 if (library.Spells.Count > 0)
                 {

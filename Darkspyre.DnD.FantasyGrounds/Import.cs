@@ -12,7 +12,7 @@ namespace Darkspyre.DnD.FantasyGrounds
     {
 
 
-        public async Task<DataLibrary> ImportFile(string dbPath, string definitionPath, object sourceType)
+        public async Task<DataLibrary> ImportFile(string dbPath, string definitionPath, int sourceType)
         {
             var dl = new DataLibrary();
             XmlDocument doc = new XmlDocument();

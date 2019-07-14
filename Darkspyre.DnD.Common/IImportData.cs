@@ -8,7 +8,7 @@ namespace Darkspyre.DnD.Interface
 {
     public interface IImportData
     {
-        Task<DataLibrary> ImportFile(string dbPath, string definitionPath, object sourceType);
+        Task<DataLibrary> ImportFile(string dbPath, string definitionPath, int sourceType);
     }
 
    

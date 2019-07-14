@@ -8,8 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.2.4" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+    <Compile Remove="MainForm.cs" />
+    <Compile Remove="MainForm.Designer.cs" />
+    <Compile Remove="MainForm2.Code.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="MainForm.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0-preview6.19304.10" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.0.0-preview6.19304.6" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.0.0-preview6.19304.6" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,17 +29,35 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="MainForm.cs">
+    <Compile Update="Controls\HeaderLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\HeaderLabel.Designer.cs">
+      <DependentUpon>HeaderLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Controls\SpellsManager.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controls\SpellsManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controls\SpellsManager.Designer.cs">
+      <DependentUpon>SpellsManager.cs</DependentUpon>
+    </Compile>
+    <Compile Update="MainForm2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Update="MainForm2.Designer.cs">
+      <DependentUpon>MainForm2.cs</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Update="Controls\SpellsManager.resx">
+      <DependentUpon>SpellsManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MainForm2.resx">
+      <DependentUpon>MainForm2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
 

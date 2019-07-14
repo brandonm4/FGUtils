@@ -14,8 +14,10 @@ namespace Darkspyre.DnD.FantasyGrounds
 
     public enum FGSourceType
     {
+        CampaignDef,
         Campaign,
         Module,
+        ModuleDef,
         Extension,
     }
 }
