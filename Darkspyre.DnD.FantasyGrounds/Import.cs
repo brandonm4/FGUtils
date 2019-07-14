@@ -12,7 +12,7 @@ namespace Darkspyre.DnD.FantasyGrounds
     {
 
 
-        public async Task<DataLibrary> ImportFile( string dbPath, string definitionPath, object sourceType)
+        public async Task<DataLibrary> ImportFile(string dbPath, string definitionPath, object sourceType)
         {
             var dl = new DataLibrary();
             XmlDocument doc = new XmlDocument();
@@ -78,50 +78,51 @@ namespace Darkspyre.DnD.FantasyGrounds
 
         private async Task ImportSpells(XmlNode spellbook, DataLibrary dl)
         {
-           // await Task.Run(() =>
-           //{
-               foreach (XmlNode spelldata in spellbook.ChildNodes)
-               {
-                   if (spelldata.HasChildNodes)
-                   {
-                       var spell = new Spell();
-                       spell.FormId = spelldata.Name;
-                       foreach (XmlNode c in spelldata.ChildNodes)
-                       {
-                           switch (c.Name.ToLower().Trim())
-                           {
-                               case "name":
-                                   spell.Name = c.InnerText;
-                                   break;
-                               case "school":
-                                   spell.School = c.InnerText;
-                                   break;
-                               case "level":
-                                   spell.Level = Convert.ToByte(c.InnerText);
-                                   break;
-                               case "source":
-                                   spell.Source = c.InnerText;
-                                   break;
-                               case "castingtime":
-                                   spell.Time = c.InnerText;
-                                   break;
-                               case "components":
-                                   spell.Components = c.InnerText;
-                                   break;
-                               case "description":
-                                   spell.Text = c.InnerText;
-                                   break;
-                               case "duration":
-                                   spell.Duration = c.InnerText;
-                                   break;
-                               case "range":
-                                   spell.Range = c.InnerText;
-                                   break;
-                               case "ritual":
-                                   spell.Ritual = (c.InnerText == "0") ? false : true;
-                                   break;
-                            
+            // await Task.Run(() =>
+            //{
+            foreach (XmlNode spelldata in spellbook.ChildNodes)
+            {
+                if (spelldata.HasChildNodes)
+                {
+                    var spell = new Spell();
+                    spell.FormId = spelldata.Name;
+                    foreach (XmlNode c in spelldata.ChildNodes)
+                    {
+                        switch (c.Name.ToLower().Trim())
+                        {
+                            case "name":
+                                spell.Name = c.InnerText;
+                                break;
+                            case "school":
+                                spell.School = c.InnerText;
+                                break;
+                            case "level":
+                                spell.Level = Convert.ToByte(c.InnerText);
+                                break;
+                            case "source":
+                                spell.Source = c.InnerText;
+                                break;
+                            case "castingtime":
+                                spell.Time = c.InnerText;
+                                break;
+                            case "components":
+                                spell.Components = c.InnerText;
+                                break;
+                            case "description":
+                                spell.Text = c.InnerText;
+                                break;
+                            case "duration":
+                                spell.Duration = c.InnerText;
+                                break;
+                            case "range":
+                                spell.Range = c.InnerText;
+                                break;
+                            case "ritual":
+                                spell.Ritual = (c.InnerText == "0") ? false : true;
+                                break;
+
                             case "aoe":
+                            case "effect":
                                 spell.AreaOfEffect = c.InnerText;
                                 break;
                             case "locked":
@@ -147,13 +148,16 @@ namespace Darkspyre.DnD.FantasyGrounds
                                 break;
                             case "type":
                                 spell.SpellType = c.InnerText;
-                                break;                                                                                                                                                    
-                           }
-                       }
-                       dl.Spells.Add(spell);  //Should probably check to see if the spell exists and update it, but for now this is a pure import to a fresh list.
-                   }
-               }
-          // });
+                                break;
+                            case "sr":
+                                spell.SpellResistance = c.InnerText;
+                                break;
+                        }
+                    }
+                    dl.Spells.Add(spell);  //Should probably check to see if the spell exists and update it, but for now this is a pure import to a fresh list.
+                }
+            }
+            // });
         }
 
         private async Task ImportCharacters(XmlNode charsheet, DataLibrary dl)

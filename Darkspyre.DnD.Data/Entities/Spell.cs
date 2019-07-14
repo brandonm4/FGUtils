@@ -186,6 +186,7 @@ namespace Darkspyre.DnD.Data.Entities
         public string Sphere { get; set; }
         public string ShortDescription { get; set; }
         public string SpellType { get; set; }
+        public string SpellResistance { get; set; }
     
         public string Source { get; set; }
         public string SourceBook { get; set; }
