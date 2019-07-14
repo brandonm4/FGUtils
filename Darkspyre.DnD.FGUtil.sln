@@ -21,6 +21,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Application
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{A3F5F87B-C387-440F-ABE2-CE2D47EE86E1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SampleData", "SampleData", "{C63DBD65-F6EC-4947-A4EF-AF94E236B22C}"
+	ProjectSection(SolutionItems) = preProject
+		SampleData\db.xml = SampleData\db.xml
+		SampleData\db2E.xml = SampleData\db2E.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

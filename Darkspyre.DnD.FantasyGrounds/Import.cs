@@ -12,7 +12,7 @@ namespace Darkspyre.DnD.FantasyGrounds
     {
 
 
-        public async Task<DataLibrary> ImportFile(FGDataType dataType, string dbPath, string definitionPath = "")
+        public async Task<DataLibrary> ImportFile( string dbPath, string definitionPath, object sourceType)
         {
             var dl = new DataLibrary();
             XmlDocument doc = new XmlDocument();
@@ -62,6 +62,8 @@ namespace Darkspyre.DnD.FantasyGrounds
                     tasks.Add(ImportSpells(spellbookNode, dl));
                 }
                 //add task to import charsheets
+                //add task to import npcs
+                //add task to import items
                 //add task to import other things
                 //Will need to check and see if async updating the same object but different lists will matter.
 
@@ -118,6 +120,34 @@ namespace Darkspyre.DnD.FantasyGrounds
                                case "ritual":
                                    spell.Ritual = (c.InnerText == "0") ? false : true;
                                    break;
+                            
+                            case "aoe":
+                                spell.AreaOfEffect = c.InnerText;
+                                break;
+                            case "locked":
+                                spell.Locked = (c.InnerText == "0") ? false : true;
+                                break;
+                            case "mac":
+                                spell.MAC = Int32.Parse(c.InnerText);
+                                break;
+                            case "pspcost":
+                                spell.PSPCost = Int32.Parse(c.InnerText);
+                                break;
+                            case "pspfail":
+                                spell.PSPFail = Int32.Parse(c.InnerText);
+                                break;
+                            case "save":
+                                spell.Save = c.InnerText;
+                                break;
+                            case "sphere":
+                                spell.Sphere = c.InnerText;
+                                break;
+                            case "shortdescription":
+                                spell.ShortDescription = c.InnerText;
+                                break;
+                            case "type":
+                                spell.SpellType = c.InnerText;
+                                break;                                                                                                                                                    
                            }
                        }
                        dl.Spells.Add(spell);  //Should probably check to see if the spell exists and update it, but for now this is a pure import to a fresh list.

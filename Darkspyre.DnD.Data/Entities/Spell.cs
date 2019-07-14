@@ -177,6 +177,16 @@ namespace Darkspyre.DnD.Data.Entities
             }
         }
 
+        public string AreaOfEffect { get; set; }
+        public bool Locked { get; set; }
+        public int MAC { get; set; }
+        public int PSPCost { get; set; }
+        public int PSPFail { get; set; }
+        public string Save { get; set; }
+        public string Sphere { get; set; }
+        public string ShortDescription { get; set; }
+        public string SpellType { get; set; }
+    
         public string Source { get; set; }
         public string SourceBook { get; set; }
         public string SourceBookAbr { get; set; }

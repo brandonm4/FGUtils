@@ -8,13 +8,8 @@ namespace Darkspyre.DnD.Interface
 {
     public interface IImportData
     {
-        Task<DataLibrary> ImportFile(FGDataType dataType, string dbPath, string definitionPath);
+        Task<DataLibrary> ImportFile(string dbPath, string definitionPath, object sourceType);
     }
 
-    public enum FGDataType
-    {
-        Campaign,
-        Module,        
-        Extension,
-    }
+   
 }

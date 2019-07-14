@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Darkspyre.DnD.Data.Entities
 {
-    public class CharSheet
+    public class CharSheet : BaseEntity
     {
         public string Holder { get; set; }
         public List<AbilityScore> Abilities { get; set; } = new List<AbilityScore>();
@@ -14,6 +14,12 @@ namespace Darkspyre.DnD.Data.Entities
         public RecordLink BackgroundLink { get; set; }
         public string Bonds { get; set; }
         public List<ClassEntry> Classes { get; set; } = new List<ClassEntry>();
+        public string CoinOther { get; set; }
+        public int CurHP { get; set; }
+        public int CurrentEdit { get; set; }
+        public string DCI { get; set; }
+
+       
     }
     public class RecordLink
     {
@@ -42,6 +48,12 @@ namespace Darkspyre.DnD.Data.Entities
             public int Level { get; set; }
             public string Name { get; set; }
             public RecordLink Shortcut { get; set; }
+        }
+
+        public class CoinSlot
+        {
+            public int Amount { get; set; }
+            public string Name { get; set; }
         }
     }
        

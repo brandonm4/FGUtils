@@ -234,7 +234,7 @@ namespace Darkspyre.DnD.SpellTool.Win
             else
             {
                 var importer = new Import();
-                DataLibrary library = importer.ImportFile(FGDataType.Campaign, path, "").Result;
+                DataLibrary library = importer.ImportFile(path, "", FGSourceType.Campaign).Result;
 
                 if (library.Spells.Count > 0)
                 {
