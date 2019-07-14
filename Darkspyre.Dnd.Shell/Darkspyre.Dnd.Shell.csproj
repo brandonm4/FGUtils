@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Darkspyre.DnD.Data\Darkspyre.DnD.Data.csproj" />
+    <ProjectReference Include="..\Darkspyre.DnD.FantasyGrounds\Darkspyre.DnD.FantasyGrounds.csproj" />
+  </ItemGroup>
+
+</Project>
