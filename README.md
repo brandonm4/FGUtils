@@ -7,11 +7,12 @@ Instructions for End-Users
 2. Extract this file somewhere.  
 3. In the extracted folder - run FGSpellListGen.exe
 4. In the form that pops up, it has 4 inputs.
-    Input - This is path to either a campaign db.xml, or a module client.xml
-    Output - Enter the name the file you'd like to save to.  At the moment this creates /only/ the spelllists section of the module, so this should be a new file.  Do NOT overwrite your campaign or module xml file.
-    Levels - Comma delimited list of spell levels to creats.  Leave blank for all.  example:  0,1,2,3 would generate lists for spell levels 0 through 3.
-    Module Name - you should put in the ID of your module.  From the <name> entry in your modules definitions.xml file.
-5. Once it completes, you can open the new file in a text editor and copy and paste the spelllists from the new file into the resource section of the module.
+5. -Input - This is path to either a campaign db.xml, or a module client.xml
+6. -Output - Enter the name the file you'd like to save to.  At the moment this creates /only/ the spelllists section of the module, so this should be a new file.  Do NOT overwrite your campaign or module xml file.
+7. -Levels - Comma delimited list of spell levels to creats.  Leave blank for all.  example:  0,1,2,3 would generate lists for spell levels 0 through 3.
+8. -Module Name - you should put in the ID of your module.  From the <name> entry in your modules definitions.xml file.
+
+9. Once it completes, you can open the new file in a text editor and copy and paste the spelllists from the new file into the resource section of the module.
 
 
 Notes for Developers
@@ -20,8 +21,8 @@ Notes for Developers
 2. Darkspyre.DnD.FantasyGrounds - this contains the Import and Export functions.  It can currently read <spell> and <spelldata> sections from db and client.xml created by FantasyGrounds.  I've started on charsheets but this is in the early stages.  The Export currently only exports <spelllists>.
 3. Darkspyre.DnD.Data - this has the data objects.  These are standard Entity-type classes.  Ignore the dbcontext parts.  
 4. Darkspyre.DnD.Shell - this is a little console app to test/use the import/export.  It takes the following params:
-     -input="PathToDBXml"   Path to the input db.xml or campaign.xml.  Put in quotes if there's a space.
-     -output="PathToOutputXml"  Where it saves the generated spelllists.
-     -levels="0,1,2,3" Comma delimited list of levels to include, leave blank for all
-     -modulename="DSTestModule" you should put in the ID of your module.  From the <name> entry in your modules definitions.xml
-5. Darkspyre.DnD.SpellTool.Win - WinForms version of #4
+5. -input="PathToDBXml"   Path to the input db.xml or campaign.xml.  Put in quotes if there's a space.
+6. -output="PathToOutputXml"  Where it saves the generated spelllists.
+7. -levels="0,1,2,3" Comma delimited list of levels to include, leave blank for all
+8. -modulename="DSTestModule" you should put in the ID of your module.  From the <name> entry in your modules definitions.xml
+9. Darkspyre.DnD.SpellTool.Win - WinForms version of #4
