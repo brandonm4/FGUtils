@@ -1,0 +1,132 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Localization\de\MetroToggle.xml" />
+    <None Remove="Localization\en\MetroToggle.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\de\MetroToggle.xml" />
+    <EmbeddedResource Include="Localization\en\MetroToggle.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Components\MetroStyleExtender.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Components\MetroStyleManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Components\MetroToolTip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroDateTime.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroDropDownButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroGrid.designer.cs">
+      <DependentUpon>MetroGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Controls\MetroLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroLink.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroProgressSpinner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroScrollBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroTile.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroToggle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroTrackBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MetroUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Drawing\Html\HtmlLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Drawing\Html\HtmlPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Drawing\Html\HtmlToolTip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Forms\MetroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\MetroTaskWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MessageBox\MetroMessageBoxControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MessageBox\MetroMessageBoxControl.Designer.cs">
+      <DependentUpon>MetroMessageBoxControl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Controls\MetroComboBox.resx">
+      <DependentUpon>MetroComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\MetroGrid.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MetroGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\MetroTextBox.resx">
+      <DependentUpon>MetroTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MessageBox\MetroMessageBoxControl.resx">
+      <DependentUpon>MetroMessageBoxControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

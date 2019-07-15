@@ -1,5 +1,6 @@
 ﻿
 using Darkspyre.DnD.Data.Entities;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ using System.Windows.Forms;
 
 namespace Darkspyre.DnD.SpellTool.Win
 {
-    public partial class MainForm2 : Form
+    public partial class MainForm2 : MetroForm
     {
         public DataLibrary dataLibrary { get; set; } = new DataLibrary();
         public MainForm2()

@@ -26,6 +26,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Darkspyre.DnD.Data\Darkspyre.DnD.Data.csproj" />
     <ProjectReference Include="..\Darkspyre.DnD.FantasyGrounds\Darkspyre.DnD.FantasyGrounds.csproj" />
+    <ProjectReference Include="..\ExternalLibs\MetroFramework\MetroFramework.Core\MetroFramework.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
