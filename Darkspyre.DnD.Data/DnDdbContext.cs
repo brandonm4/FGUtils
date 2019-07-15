@@ -9,16 +9,15 @@ namespace Darkspyre.DnD.Data
 {
     public class DnDdbContext : IdentityDbContext
     {
-      //  public DbSet<Race> Races { get; set; }
-       // public DbSet<EquipmentItem> EquipmentItems { get; set; }
-        public DbSet<Spell> Spells { get; set; }
+        public DbSet<AbilityScore> AbilityScores { get; set; }
+        public DbSet<Background> Backgrounds { get; set; }
+        public DbSet<CharClass> CharacterClasses { get; set; }
+        public DbSet<CharSheet> CharacterSheets { get; set; }
+        public DbSet<Feature> Features { get; set; }
+        public DbSet<NameValue> NameValues { get; set; }
         public DbSet<NonPlayerCharacter> NonPlayerCharacters { get; set; }
-       // public DbSet<Class> Classes { get; set; }
-
-       // public DbSet<PlayerCharacter> PlayerCharacters { get; set; }
-       // public DbSet<PlayerCharacterAPC> PlayerCharacterAPCs { get; set; }
-        
-
+        public DbSet<Spell> Spells { get; set; }        
+  
         public DnDdbContext(DbContextOptions<DnDdbContext> options) 
             : base(options)
         {
