@@ -12,6 +12,7 @@ namespace Darkspyre.DnD.Data
       //  public DbSet<Race> Races { get; set; }
        // public DbSet<EquipmentItem> EquipmentItems { get; set; }
         public DbSet<Spell> Spells { get; set; }
+        public DbSet<NonPlayerCharacter> NonPlayerCharacters { get; set; }
        // public DbSet<Class> Classes { get; set; }
 
        // public DbSet<PlayerCharacter> PlayerCharacters { get; set; }

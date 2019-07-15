@@ -29,15 +29,7 @@ namespace Darkspyre.DnD.Data.Entities
 
     namespace Darkspyre.DnD.Data.CharSheetData
     {
-        public class AbilityScore
-        {
-            public string Name { get; set; } = "";
-            public int Bonus { get; set; } = 0;
-            public int Save { get; set; } = 0;
-            public int SaveModifer { get; set; } = 0;
-            public int SaveProf { get; set; } = 0;
-            public int Score { get; set; } = 10;
-        }
+        
        
         public class ClassEntry
         {
