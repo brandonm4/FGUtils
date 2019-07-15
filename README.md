@@ -26,3 +26,11 @@ Notes for Developers
 7. -levels="0,1,2,3" Comma delimited list of levels to include, leave blank for all
 8. -modulename="DSTestModule" you should put in the ID of your module.  From the <name> entry in your modules definitions.xml
 9. Darkspyre.DnD.SpellTool.Win - WinForms version of #4
+
+Supported Data Types in Data Library
+* Backgrounds
+* Character Classes
+* Character Sheets
+* NPC - Can be read in from module or campaign xml
+* Spells - Can be read in from module or campaign xml
+
