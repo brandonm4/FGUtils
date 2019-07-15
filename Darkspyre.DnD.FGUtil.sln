@@ -18,6 +18,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Darkspyre.DnD.Interface", "Darkspyre.DnD.Common\Darkspyre.DnD.Interface.csproj", "{2B019BF5-7669-4D0D-BF95-C6577505928F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{79D523A3-2995-4C6F-9158-DC8E5AC72F45}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{A3F5F87B-C387-440F-ABE2-CE2D47EE86E1}"
 EndProject
