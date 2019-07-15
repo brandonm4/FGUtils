@@ -12,8 +12,8 @@ namespace Darkspyre.DnD.FantasyGrounds
     {
         private async Task ImportNPC(XmlNode NPCs, DataLibrary dl)
         {
-            // await Task.Run(() =>
-            //{
+           await Task.Factory.StartNew(  () =>
+            {
             foreach (XmlNode npcData in NPCs.ChildNodes)
             {
                 if (npcData.Name != "#whitespace" && npcData.HasChildNodes)
@@ -21,14 +21,20 @@ namespace Darkspyre.DnD.FantasyGrounds
                     var npc = new NonPlayerCharacter();
                     npc.Id = npcData.Name.Trim();
                     foreach (XmlNode c in npcData.ChildNodes)
-                   {
+                    {
                         if (c.Name != "#whitespace")
                         {
                             switch (c.Name.ToLower().Trim())
                             {
 
                                 case "abilities":
-                                    
+                                    foreach (XmlNode a in c.ChildNodes)
+                                    {
+                                        if (a.Name != "#whitespace")
+                                        {
+                                            npc.Abilities.Add(ImportAbilityScore(a));
+                                        }
+                                    }
                                     break;
                                 case "ac":
                                     npc.AC = Convert.ToInt32(c.InnerText);
@@ -41,12 +47,12 @@ namespace Darkspyre.DnD.FantasyGrounds
                                     {
                                         if (a.Name != "#whitespace")
                                         {
-                                            npc.Actions.Add(await ImportNameValue(a));
+                                            npc.Actions.Add(ImportNameValue(a));
                                         }
                                     }
                                     break;
                                 case "alignment":
-                                    npc.Alignment =  c.InnerText;
+                                    npc.Alignment = c.InnerText;
                                     break;
                                 case "conditionimmunities":
                                     npc.ConditionImmunities = c.InnerText;
@@ -74,7 +80,7 @@ namespace Darkspyre.DnD.FantasyGrounds
                                     {
                                         if (a.Name != "#whitespace")
                                         {
-                                            npc.InnateSpells.Add(await ImportNameValue(a));
+                                            npc.InnateSpells.Add(ImportNameValue(a));
                                         }
                                     }
                                     break;
@@ -83,7 +89,7 @@ namespace Darkspyre.DnD.FantasyGrounds
                                     {
                                         if (a.Name != "#whitespace")
                                         {
-                                            npc.LairActions.Add(await ImportNameValue(a));
+                                            npc.LairActions.Add(ImportNameValue(a));
                                         }
                                     }
                                     break;
@@ -95,7 +101,7 @@ namespace Darkspyre.DnD.FantasyGrounds
                                     {
                                         if (a.Name != "#whitespace")
                                         {
-                                            npc.LegendaryActions.Add(await ImportNameValue(a));
+                                            npc.LegendaryActions.Add(ImportNameValue(a));
                                         }
                                     }
                                     break;
@@ -107,7 +113,7 @@ namespace Darkspyre.DnD.FantasyGrounds
                                     {
                                         if (a.Name != "#whitespace")
                                         {
-                                            npc.Reactions.Add(await ImportNameValue(a));
+                                            npc.Reactions.Add(ImportNameValue(a));
                                         }
                                     }
                                     break;
@@ -131,7 +137,7 @@ namespace Darkspyre.DnD.FantasyGrounds
                                     {
                                         if (a.Name != "#whitespace")
                                         {
-                                            npc.Spells.Add(await ImportNameValue(a));
+                                            npc.Spells.Add(ImportNameValue(a));
                                         }
                                     }
                                     break;
@@ -140,7 +146,7 @@ namespace Darkspyre.DnD.FantasyGrounds
                                     {
                                         if (a.Name != "#whitespace")
                                         {
-                                            npc.SpellSlots.Add(new NameValue { Name=a.Name, Value=a.InnerText });
+                                            npc.SpellSlots.Add(new NameValue { Name = a.Name, Value = a.InnerText });
                                         }
                                     }
                                     break;
@@ -155,7 +161,7 @@ namespace Darkspyre.DnD.FantasyGrounds
                                     {
                                         if (a.Name != "#whitespace")
                                         {
-                                            npc.Traits.Add(await ImportNameValue(a));
+                                            npc.Traits.Add(ImportNameValue(a));
                                         }
                                     }
                                     break;
@@ -172,33 +178,14 @@ namespace Darkspyre.DnD.FantasyGrounds
                                     Console.WriteLine(c.Name);
                                     break;
                             }
-                        }                        												 
+                        }
                     }
                     dl.NonPlayerCharacters.Add(npc);
                 }
             }
+
+            });
         }
 
-		private async Task<NameValue> ImportNameValue(XmlNode node)
-        {
-            var nv = new NameValue();
-            nv.Id = node.Name.Trim();
-            foreach (XmlNode n in node.ChildNodes)
-            {
-                if (n.Name != "#whitespace")
-                {
-                    switch (n.Name.ToLower().Trim())
-                    {
-                        case "name":
-                            nv.Name = n.InnerText;
-                            break;
-                        case "desc":
-                            nv.Value = n.InnerText;
-                            break;
-                    }
-                }
-            }
-            return nv;
-        }
     }
 }

@@ -42,6 +42,7 @@ namespace Darkspyre.DnD.FantasyGrounds
                     }
                 }
 
+                //check root node for our data nodes - campaign mode
                 if (rootNode != null)
                 {
                     foreach (XmlNode n in rootNode.ChildNodes)
@@ -56,11 +57,12 @@ namespace Darkspyre.DnD.FantasyGrounds
                         }
                     }
                 }
+                // if we haven't found our nodes, then they are probably in the reference node - module mode
                 if (spellbookNode == null || NPCNode == null)
                 {
                     foreach (XmlNode n in referenceNode.ChildNodes)
                     {
-                        if (n.Name == "spelldata") //spells store in spell in campaign db
+                        if (n.Name == "spelldata") 
                         {
                             spellbookNode = n;
                         }
@@ -96,80 +98,70 @@ namespace Darkspyre.DnD.FantasyGrounds
             return dl;
         }
 
-        
-
-        private async Task ImportCharacters(XmlNode charsheet, DataLibrary dl)
+        private NameValue ImportNameValue(XmlNode node)
         {
-
+            var nv = new NameValue();
+            nv.Id = node.Name.Trim();
+            foreach (XmlNode n in node.ChildNodes)
+            {
+                if (n.Name != "#whitespace")
+                {
+                    switch (n.Name.ToLower().Trim())
+                    {
+                        case "name":
+                            nv.Name = n.InnerText;
+                            break;
+                        case "desc":
+                            nv.Value = n.InnerText;
+                            break;
+                    }
+                }
+            }
+            return nv;
         }
+
+        private AbilityScore ImportAbilityScore(XmlNode data)
+        {
+            var a = new AbilityScore();
+            switch (data.Name.ToLower())
+            {
+                case "strength":
+                    a.AbilityType = AbilityType.Strength;
+                    break;
+                case "dexterity":
+                    a.AbilityType = AbilityType.Dexterity;
+                    break;
+                case "constitution":
+                    a.AbilityType = AbilityType.Constitution;
+                    break;
+                case "wisdom":
+                    a.AbilityType = AbilityType.Wisdom;
+                    break;
+                case "intelligence":
+                    a.AbilityType = AbilityType.Intelligence;
+                    break;
+                case "charisma":
+                    a.AbilityType = AbilityType.Charisma;
+                    break;
+            }
+            foreach (XmlNode n in data.ChildNodes)
+            {
+                if (n.Name != "#whitespace")
+                {
+                    switch (n.Name)
+                    {
+                        case "score":
+                            a.Score = Convert.ToInt32(n.InnerText);
+                            break;
+                        case "bonus":
+                            a.Bonus = Convert.ToInt32(n.InnerText);
+                            break;
+                    }
+                }
+            }
+            return a;
+        }
+
+
     }
 }
-
-/*
-
-
- * 
- * 
- * List<Race> races = new List<Race>();
-            string path = "C:\\Development\\Brandon\\darkspyre.dnd\\Darkspyre.DnD.FantasyGrounds\\spellmodule.xml";
-
-            List<Spell> spells = new List<Spell>();
-
-            List<string> SourceLIst = new List<string>();
-
-
-            XmlDocument doc = new XmlDocument();
-            doc.PreserveWhitespace = true;
-            try
-            {
-                doc.Load(path);
-                XmlNode spellbook = null;
-
-                foreach (XmlNode n in doc.ChildNodes)
-                {
-                    if (n.Name == "spelldata")
-                    {
-                        spellbook = n;
-                        break;
-
-                    }                   
-                }
-
-                if (spellbook != null)
-                {
-                    foreach (XmlNode spelldata  in spellbook.ChildNodes)
-                    {
-                        if (spelldata.HasChildNodes)
-                        {
-                            var spell = new Spell();
-                            spell.FormId = spelldata.Name;
-                            foreach(XmlNode c in spelldata.ChildNodes)
-                            {
-                                switch(c.Name.ToLower().Trim())
-                                {
-                                    case "name":
-                                        spell.Name = c.InnerText;
-                                        break;
-                                    case "school":
-                                        spell.School = c.InnerText;
-                                        break;
-                                    case "level":
-                                        spell.Level = Convert.ToByte(c.InnerText);
-                                        break;
-                                    case "source":
-                                        spell.Source = c.InnerText;
-                                        var sources = spell.Source.Split(',');
-                                        foreach(var sc in sources)
-                                        {
-                                            if (!SourceLIst.Contains(sc.ToLower().Trim()))
-                                            {
-                                                SourceLIst.Add(sc.ToLower().Trim());
-                                            }
-                                        }
-                                        break;
-                                }
-                            }
-                            spells.Add(spell);
-                        }
-                    }
-                }*/
