@@ -10,7 +10,10 @@ namespace Darkspyre.DnD.Data.Entities
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public string Id { get; set; } = Guid.NewGuid().ToString();   
+        public string Id { get; set; } = Guid.NewGuid().ToString();
+
+
+        
     }
 
     public interface ISource

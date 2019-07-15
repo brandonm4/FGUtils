@@ -25,15 +25,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SampleData", "SampleData", 
 	ProjectSection(SolutionItems) = preProject
 		SampleData\campaign.xml = SampleData\campaign.xml
 		SampleData\client.xml = SampleData\client.xml
-		SampleData\db.xml = SampleData\db.xml
 		SampleData\db2E.xml = SampleData\db2E.xml
-		SampleData\dbmm.xml = SampleData\dbmm.xml
+		SampleData\dbCampaign.xml = SampleData\dbCampaign.xml
+		SampleData\dbnpc.xml = SampleData\dbnpc.xml
 		SampleData\definition.xml = SampleData\definition.xml
+		..\darkspyre.dnd.data\backup\reference\DD PHB Deluxe\module.xml = ..\darkspyre.dnd.data\backup\reference\DD PHB Deluxe\module.xml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpellTool.Designer", "SpellTool.Designer\SpellTool.Designer.csproj", "{6D2998E2-E44A-42C1-8AD6-DBE2E717AFE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Darkspyre.Ruleset", "Darkspyre.Ruleset\Darkspyre.Ruleset.csproj", "{5CDDE611-6637-4BB6-B111-9CF43CB1BF70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Darkspyre.Ruleset", "Darkspyre.Ruleset\Darkspyre.Ruleset.csproj", "{5CDDE611-6637-4BB6-B111-9CF43CB1BF70}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetroFramework.Core", "ExternalLibs\MetroFramework\MetroFramework.Core\MetroFramework.Core.csproj", "{3E69653E-7C9A-408A-AF6E-70F2053BFDD6}"
 EndProject

@@ -1,11 +1,12 @@
 ﻿
+using Darkspyre.DnD.Interface;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Darkspyre.DnD.Data.Entities
 {
-    public class NonPlayerCharacter : BaseEntity
+    public class NonPlayerCharacter : BaseEntity, IName
     {
         public List<AbilityScore> Abilities { get; set; } = new List<AbilityScore>();
         public int AC { get; set; }

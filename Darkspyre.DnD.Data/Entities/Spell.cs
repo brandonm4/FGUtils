@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Darkspyre.DnD.Interface;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -6,7 +7,7 @@ using System.Text;
 
 namespace Darkspyre.DnD.Data.Entities
 {
-    public partial class Spell : BaseEntity, ISource
+    public partial class Spell : BaseEntity, ISource, IName
     {
 
         private string nameField;

@@ -1,11 +1,12 @@
 ﻿using Darkspyre.DnD.Data.Entities.Darkspyre.DnD.Data.CharSheetData;
+using Darkspyre.DnD.Interface;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Darkspyre.DnD.Data.Entities
 {
-    public class CharSheet : BaseEntity
+    public class CharSheet : BaseEntity, IName
     {
         public string Holder { get; set; }
         public List<AbilityScore> Abilities { get; set; } = new List<AbilityScore>();
@@ -18,6 +19,8 @@ namespace Darkspyre.DnD.Data.Entities
         public int CurHP { get; set; }
         public int CurrentEdit { get; set; }
         public string DCI { get; set; }
+
+        public string Name { get; set; }
 
        
     }
