@@ -43,6 +43,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetroFramework.Core", "Exte
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{181C246F-A10B-4EFB-9021-4FD2957CE594}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Darkspyre.DnD.Import.LionsDenXML", "Darkspyre.DnD.Data.LionsDen\Darkspyre.DnD.Import.LionsDenXML.csproj", "{4FADCEAF-6E20-44C6-8EB1-99F3B7DFF4A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,6 +86,10 @@ Global
 		{3E69653E-7C9A-408A-AF6E-70F2053BFDD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E69653E-7C9A-408A-AF6E-70F2053BFDD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E69653E-7C9A-408A-AF6E-70F2053BFDD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FADCEAF-6E20-44C6-8EB1-99F3B7DFF4A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FADCEAF-6E20-44C6-8EB1-99F3B7DFF4A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FADCEAF-6E20-44C6-8EB1-99F3B7DFF4A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FADCEAF-6E20-44C6-8EB1-99F3B7DFF4A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,6 +104,7 @@ Global
 		{5CDDE611-6637-4BB6-B111-9CF43CB1BF70} = {A3F5F87B-C387-440F-ABE2-CE2D47EE86E1}
 		{3E69653E-7C9A-408A-AF6E-70F2053BFDD6} = {181C246F-A10B-4EFB-9021-4FD2957CE594}
 		{181C246F-A10B-4EFB-9021-4FD2957CE594} = {79D523A3-2995-4C6F-9158-DC8E5AC72F45}
+		{4FADCEAF-6E20-44C6-8EB1-99F3B7DFF4A7} = {21CF677B-73A2-4327-9AF4-2F536044A3AE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F503FA04-BB9F-47EC-B2F8-A9AF94921550}
