@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\Atiba\Vextec\vextecvpsmicro50\MetroFramework\MetroFramework\bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\..\..\Atiba\Vextec\vextecvpsmicro50\MetroFramework\MetroFramework.Design\bin\Debug\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\..\..\Atiba\Vextec\vextecvpsmicro50\MetroFramework\MetroFramework.Fonts\bin\Debug\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,8 +55,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\Darkspyre.DnD.SpellTool.Win\MainForm2.Code.cs">
+      <Link>MainForm2.Code.cs</Link>
+    </None>
+    <Compile Include="..\Darkspyre.DnD.SpellTool.Win\MainForm2.cs">
+      <Link>MainForm2.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="..\Darkspyre.DnD.SpellTool.Win\MainForm2.resx">
+      <Link>MainForm2.resx</Link>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
