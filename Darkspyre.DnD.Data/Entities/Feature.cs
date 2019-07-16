@@ -12,18 +12,7 @@ namespace Darkspyre.DnD.Data.Entities
         public string Text { get; set; }
         public int Level { get; set; }
 
-        [NotMapped]
-        public string FeatureId
-        {
-            get
-            {
-                if (!String.IsNullOrEmpty(this.Name))
-                {
-                    return ((IName)this).NameToId() + this.Level.ToString();
-                }
-                return Id;
-            }
-        }
+        
 
     }
 }

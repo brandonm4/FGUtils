@@ -7,12 +7,12 @@ namespace Darkspyre.DnD.Interface
 {
     public interface IName
     {
-        public string Name { get; set; }
+        string Name { get; set; }
 
         
-        public string NameToId()
-        {            
-                return Name.ToLower().Replace(" ", "_").Replace("(", "").Replace(")", "");            
-        }
+        //public string NameToId()
+        //{            
+        //        return Name.ToLower().Replace(" ", "_").Replace("(", "").Replace(")", "");            
+        //}
     }
 }

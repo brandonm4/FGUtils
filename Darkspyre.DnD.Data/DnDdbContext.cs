@@ -1,5 +1,5 @@
 ﻿using Darkspyre.DnD.Data.Entities;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Darkspyre.DnD.Data
 {
-    public class DnDdbContext : IdentityDbContext
+    public class DnDdbContext : DbContext
     {
         public DbSet<AbilityScore> AbilityScores { get; set; }
         public DbSet<Background> Backgrounds { get; set; }
