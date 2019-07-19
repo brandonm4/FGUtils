@@ -29,8 +29,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SampleData", "SampleData", 
 		SampleData\db2E.xml = SampleData\db2E.xml
 		SampleData\dbCampaign.xml = SampleData\dbCampaign.xml
 		SampleData\dbnpc.xml = SampleData\dbnpc.xml
+		SampleData\dbspells.xml = SampleData\dbspells.xml
 		SampleData\definition.xml = SampleData\definition.xml
 		..\darkspyre.dnd.data\backup\reference\DD PHB Deluxe\module.xml = ..\darkspyre.dnd.data\backup\reference\DD PHB Deluxe\module.xml
+		SampleData\sampleout.xml = SampleData\sampleout.xml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpellTool.Designer", "SpellTool.Designer\SpellTool.Designer.csproj", "{6D2998E2-E44A-42C1-8AD6-DBE2E717AFE7}"
