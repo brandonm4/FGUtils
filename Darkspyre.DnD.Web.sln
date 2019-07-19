@@ -1,0 +1,92 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Darkspyre.DnD.Data", "Darkspyre.DnD.Data\Darkspyre.DnD.Data.csproj", "{E82208E9-0432-4AFF-A75A-BAE9F46DF497}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Converters", "Converters", "{21CF677B-73A2-4327-9AF4-2F536044A3AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Darkspyre.Extensions", "Darkspyre.Extensions\Darkspyre.Extensions.csproj", "{65EC24B5-16CE-4773-AD73-0066A9CB9E76}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Darkspyre.DnD.FantasyGrounds", "Darkspyre.DnD.FantasyGrounds\Darkspyre.DnD.FantasyGrounds.csproj", "{89FFD778-97B5-4E87-BEF6-7D515C5B4CE4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Darkspyre.DnD.Interface", "Darkspyre.DnD.Common\Darkspyre.DnD.Interface.csproj", "{2B019BF5-7669-4D0D-BF95-C6577505928F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{79D523A3-2995-4C6F-9158-DC8E5AC72F45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{A3F5F87B-C387-440F-ABE2-CE2D47EE86E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SampleData", "SampleData", "{C63DBD65-F6EC-4947-A4EF-AF94E236B22C}"
+	ProjectSection(SolutionItems) = preProject
+		SampleData\campaign.xml = SampleData\campaign.xml
+		SampleData\client.xml = SampleData\client.xml
+		SampleData\db2E.xml = SampleData\db2E.xml
+		SampleData\dbCampaign.xml = SampleData\dbCampaign.xml
+		SampleData\dbnpc.xml = SampleData\dbnpc.xml
+		SampleData\dbspells.xml = SampleData\dbspells.xml
+		SampleData\definition.xml = SampleData\definition.xml
+		..\darkspyre.dnd.data\backup\reference\DD PHB Deluxe\module.xml = ..\darkspyre.dnd.data\backup\reference\DD PHB Deluxe\module.xml
+		SampleData\sampleout.xml = SampleData\sampleout.xml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Darkspyre.Ruleset", "Darkspyre.Ruleset\Darkspyre.Ruleset.csproj", "{5CDDE611-6637-4BB6-B111-9CF43CB1BF70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{181C246F-A10B-4EFB-9021-4FD2957CE594}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Darkspyre.DnD.Import.LionsDenXML", "Darkspyre.DnD.Data.LionsDen\Darkspyre.DnD.Import.LionsDenXML.csproj", "{4FADCEAF-6E20-44C6-8EB1-99F3B7DFF4A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Darkspyre.DnD.Web", "Darkspyre.DnD.Web\Darkspyre.DnD.Web.csproj", "{CC16F6CD-279A-43DA-B72C-F01387523646}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E82208E9-0432-4AFF-A75A-BAE9F46DF497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E82208E9-0432-4AFF-A75A-BAE9F46DF497}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E82208E9-0432-4AFF-A75A-BAE9F46DF497}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E82208E9-0432-4AFF-A75A-BAE9F46DF497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65EC24B5-16CE-4773-AD73-0066A9CB9E76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65EC24B5-16CE-4773-AD73-0066A9CB9E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65EC24B5-16CE-4773-AD73-0066A9CB9E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65EC24B5-16CE-4773-AD73-0066A9CB9E76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89FFD778-97B5-4E87-BEF6-7D515C5B4CE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89FFD778-97B5-4E87-BEF6-7D515C5B4CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89FFD778-97B5-4E87-BEF6-7D515C5B4CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89FFD778-97B5-4E87-BEF6-7D515C5B4CE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B019BF5-7669-4D0D-BF95-C6577505928F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B019BF5-7669-4D0D-BF95-C6577505928F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B019BF5-7669-4D0D-BF95-C6577505928F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B019BF5-7669-4D0D-BF95-C6577505928F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CDDE611-6637-4BB6-B111-9CF43CB1BF70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CDDE611-6637-4BB6-B111-9CF43CB1BF70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CDDE611-6637-4BB6-B111-9CF43CB1BF70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CDDE611-6637-4BB6-B111-9CF43CB1BF70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FADCEAF-6E20-44C6-8EB1-99F3B7DFF4A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FADCEAF-6E20-44C6-8EB1-99F3B7DFF4A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FADCEAF-6E20-44C6-8EB1-99F3B7DFF4A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FADCEAF-6E20-44C6-8EB1-99F3B7DFF4A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC16F6CD-279A-43DA-B72C-F01387523646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC16F6CD-279A-43DA-B72C-F01387523646}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC16F6CD-279A-43DA-B72C-F01387523646}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC16F6CD-279A-43DA-B72C-F01387523646}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E82208E9-0432-4AFF-A75A-BAE9F46DF497} = {A3F5F87B-C387-440F-ABE2-CE2D47EE86E1}
+		{65EC24B5-16CE-4773-AD73-0066A9CB9E76} = {A3F5F87B-C387-440F-ABE2-CE2D47EE86E1}
+		{89FFD778-97B5-4E87-BEF6-7D515C5B4CE4} = {21CF677B-73A2-4327-9AF4-2F536044A3AE}
+		{2B019BF5-7669-4D0D-BF95-C6577505928F} = {A3F5F87B-C387-440F-ABE2-CE2D47EE86E1}
+		{5CDDE611-6637-4BB6-B111-9CF43CB1BF70} = {A3F5F87B-C387-440F-ABE2-CE2D47EE86E1}
+		{181C246F-A10B-4EFB-9021-4FD2957CE594} = {79D523A3-2995-4C6F-9158-DC8E5AC72F45}
+		{4FADCEAF-6E20-44C6-8EB1-99F3B7DFF4A7} = {21CF677B-73A2-4327-9AF4-2F536044A3AE}
+		{CC16F6CD-279A-43DA-B72C-F01387523646} = {79D523A3-2995-4C6F-9158-DC8E5AC72F45}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F503FA04-BB9F-47EC-B2F8-A9AF94921550}
+	EndGlobalSection
+EndGlobal
